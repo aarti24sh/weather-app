@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <nav>
+        <button id="showTemperature" disabled>Show Temperature</button>
+        <button id="showCondition" disabled>Show Condition</button>
+      </nav>
+      <div class="form-group">
+        <label for="city">Enter Location:</label>
+        <input type="text" id="city" placeholder="e.g., London" />
+        <button id="getWeather">Get Weather</button>
+      </div>
+      <div id="temperatureSection" class="hidden">
+        <h2>Temperature in <span id="locationTemp"></span></h2>
+        <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+      </div>
+      <div id="conditionSection" class="hidden">
+        <h2>Condition in <span id="locationCond"></span></h2>
+        <p><strong>Condition:</strong> <span id="condition"></span></p>
+      </div>
+      <div id="error" class="hidden">
+        Unable to fetch weather data. Please try again.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
